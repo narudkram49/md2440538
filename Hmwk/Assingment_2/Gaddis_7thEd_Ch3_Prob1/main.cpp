@@ -7,9 +7,10 @@
 
 //system libraries
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
-//use libraries
+//user libraries
 
 //global constants
 
@@ -18,11 +19,22 @@ using namespace std;
 //execution begins here
 int main(int argc, char** argv) {
     //declare the variables
-      int gallons;
-      int miles;
-      unsigned short mpg;
-      
-      
+    float gallons;
+    float miles;
+    float mpg;
+    
+    //input
+    cout<<"How many gallons does the fuel tank hold?"<<endl;
+    cin>>gallons;
+    cout<<"How many miles can be travels on a full tank?"<<endl;
+    cin>>miles;
+    
+    //
+    mpg = miles / gallons;
+    
+    //output results
+    cout<<fixed<<showpoint<<setprecision(2);
+    cout<<"Your miles per gallon is "<<mpg<<endl;
     return 0;
 }
 
