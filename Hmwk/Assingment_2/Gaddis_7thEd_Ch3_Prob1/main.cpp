@@ -19,9 +19,9 @@ using namespace std;
 //execution begins here
 int main(int argc, char** argv) {
     //declare the variables
-    float gallons;
-    float miles;
-    float mpg;
+    float gallons;//fuel capacity in gallons
+    float miles;//total miles traveled on a full tank
+    float mpg;//miles per gallon
     
     //input
     cout<<"How many gallons does the fuel tank hold?"<<endl;
@@ -29,7 +29,7 @@ int main(int argc, char** argv) {
     cout<<"How many miles can be travels on a full tank?"<<endl;
     cin>>miles;
     
-    //
+    //calculate variable
     mpg = miles / gallons;
     
     //output results
