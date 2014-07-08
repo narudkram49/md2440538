@@ -12,9 +12,9 @@ using namespace std;
 //use libraries
 
 //global constants
-int minute=60;
-int hour=3600;
-int day=86400;
+int MINUTE = 60,    //seconds in minute
+    HOUR   = 3600,  //seconds in hour
+    DAY    = 86400; //seconds in day
 
 
 //function prototypes
@@ -22,19 +22,21 @@ int day=86400;
 //execution begins here
 int main(int argc, char** argv) {
     //define variables
-    int second;
+    int second;//
     
     //input
     cout<<"Enter a number of seconds"<<endl;
     cin>>second;
     
-    //calculate results
-    if (second<=60)
-        cout<<"Seconds in minutes = "<<second/minute<<endl;
-    else if (second<=3600)
-        cout<<"Seconds in hours = "<<second/hour<<endl;
-    else if (second<=86400)            
-        cout<<"Seconds in days = "<<second/day<<endl;
+    //calculate and output results
+    if (second>=60)
+        cout<<"Seconds in minutes = "<<second/MINUTE<<endl;
+    
+    if (second>=3600)
+        cout<<"Seconds in hours   = "<<second/HOUR<<endl;
+    
+    if (second>=86400)            
+        cout<<"Seconds in days    = "<<second/DAY<<endl;
 
     return 0;
 }
